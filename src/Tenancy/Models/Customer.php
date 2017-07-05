@@ -96,4 +96,17 @@ class Customer extends SystemModel
     {
         return $this->hasMany(self::class, 'referer_id');
     }
+
+    /**
+     * All SSL Certificates of this customer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function sslCertificates()
+    {
+        if (class_exists(SslCertificate::class))
+            return $this->hasMany(SslCertificate::class);
+        else
+            return null;
+    }
 }

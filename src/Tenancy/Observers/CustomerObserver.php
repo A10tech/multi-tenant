@@ -14,5 +14,10 @@ class CustomerObserver
         foreach ($model->websites as $website) {
             $website->delete();
         }
+        if ($model->sslCertificates) {
+            foreach ($model->sslCertificates as $sslCertificate) {
+                $sslCertificate->delete();
+            }
+        }
     }
 }
