@@ -2,6 +2,9 @@
 
 namespace Hyn\Tenancy\Commands\Migrate;
 
+use Hyn\Tenancy\Traits\TenantDatabaseCommandTrait;
+use Illuminate\Database\Migrations\Migrator;
+
 class StatusCommand extends \Illuminate\Database\Console\Migrations\StatusCommand
 {
     use TenantDatabaseCommandTrait;
@@ -42,5 +45,16 @@ class StatusCommand extends \Illuminate\Database\Console\Migrations\StatusComman
 
             parent::fire();
         }
+    }
+
+    /**
+     * @return array
+     */
+    protected function getOptions()
+    {
+        return array_merge(
+            parent::getOptions(),
+            $this->getTenantOption()
+            );
     }
 }
