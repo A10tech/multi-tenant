@@ -3,7 +3,6 @@
 use Hyn\Tenancy\Contracts\CustomerRepositoryContract;
 use Hyn\Tenancy\Contracts\DirectoryContract;
 use Hyn\Tenancy\Contracts\HostnameRepositoryContract;
-use Hyn\Tenancy\Contracts\TenantRepositoryContract;
 use Hyn\Tenancy\Contracts\WebsiteRepositoryContract;
 use Hyn\Tenancy\Models\Customer;
 use Hyn\Tenancy\Models\Hostname;
