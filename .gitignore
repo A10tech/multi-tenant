@@ -1,3 +1,7 @@
 /vendor
 composer.phar
 composer.lock
+# ignore eclipse files
+.buildpath
+.project
+/.settings
