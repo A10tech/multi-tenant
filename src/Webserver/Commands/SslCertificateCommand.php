@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class SslCertificateCommand extends AbstractRootCommand implements ShouldQueue
 {
+    protected $name = 'webserver:ssl_certificate';
 
     /**
      * @var Certificate
