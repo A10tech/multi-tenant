@@ -40,7 +40,7 @@ class WebserverServiceProvider extends ServiceProvider
 
         // migrations
         $this->publishes(
-            [__DIR__ . '/../../database/migrations/' => database_path('/migrations')],
+            [__DIR__ . '/../../database/migrations/' => database_path('/mt-migrations')],
             'hyn-webserver-migrations');
 
         Website::observe(new Observers\WebsiteObserver());

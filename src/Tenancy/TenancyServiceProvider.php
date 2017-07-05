@@ -42,7 +42,7 @@ class TenancyServiceProvider extends ServiceProvider
         /*
          * Publish migrations
          */
-        $this->publishes([__DIR__ . '/../../database/migrations/' => database_path('/migrations')], 'migrations');
+        $this->publishes([__DIR__ . '/../../database/migrations/' => database_path('/mt-migrations')], 'migrations');
 
         /*
          * Bind tenancy into container

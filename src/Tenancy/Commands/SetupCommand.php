@@ -216,6 +216,7 @@ class SetupCommand extends Command
     {
         $this->call('migrate', [
             '--database' => DatabaseConnection::systemConnectionName(),
+            '--path' => 'database/mt-migrations',
             '-n',
         ]);
     }
