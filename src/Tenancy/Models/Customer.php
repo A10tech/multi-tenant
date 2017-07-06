@@ -7,6 +7,7 @@ use Hyn\Tenancy\Abstracts\Models\SystemModel;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laracasts\Presenter\PresentableTrait;
+use Hyn\Webserver\Models\SslCertificate;
 
 /**
  * @property int        $id
@@ -104,9 +105,6 @@ class Customer extends SystemModel
      */
     public function sslCertificates()
     {
-        if (class_exists(SslCertificate::class))
-            return $this->hasMany(SslCertificate::class);
-        else
-            return null;
+        return $this->hasMany(\Hyn\Webserver\Models\SslCertificate::class);
     }
 }
