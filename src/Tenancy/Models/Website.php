@@ -13,7 +13,7 @@ use Laracasts\Presenter\PresentableTrait;
 /**
  * @property int                $id
  * @property string             $identifier
- * @property int                $tenant_id
+ * @property int                $customer_id
  * @property Directory          $directory
  * @property DatabaseConnection $database
  * @property Collection         $hostnames
@@ -33,7 +33,7 @@ class Website extends SystemModel
 
     protected $presenter = 'Hyn\Tenancy\Presenters\WebsitePresenter';
 
-    protected $fillable = ['tenant_id', 'identifier'];
+    protected $fillable = ['customer_id', 'identifier'];
 
     protected $appends = ['directory'];
 

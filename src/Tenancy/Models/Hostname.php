@@ -17,7 +17,7 @@ use Laracasts\Presenter\PresentableTrait;
  * @property int            $redirect_to
  * @property int            $sub_of
  * @property int            $website_id
- * @property int            $tenant_id
+ * @property int            $customer_id
  * @property int            $ssl_certificate_id
  * @property Customer       $customer
  * @property Website        $website
@@ -41,7 +41,7 @@ class Hostname extends SystemModel
     /**
      * @var array
      */
-    protected $fillable = ['website_id', 'hostname', 'redirect_to', 'prefer_https', 'sub_of', 'tenant_id'];
+    protected $fillable = ['website_id', 'hostname', 'redirect_to', 'prefer_https', 'sub_of', 'customer_id'];
 
     protected $appends = [];
 
